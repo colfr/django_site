@@ -1,0 +1,26 @@
+
+
+/* fichier css pour le style de base du site */
+
+
+/* ------------ ensemble de la page ------------ */
+
+body{
+    background-image: url("../images/bkg.png");
+    font:  Tahoma, Helvetica, Arial, Sans-Serif;
+}
+
+header h1{
+    color: #bbbdbb;
+    text-shadow: 0px 2px 3px #222;
+
+}
+
+
+
+
+
+
+
+
+/* -------------- Navigation --------------------- */
