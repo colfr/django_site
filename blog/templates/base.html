@@ -3,29 +3,37 @@
 {% load staticfiles %}
 
 
-
+{% block linkcss %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-
+{% endblock %}
 
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>foo title</title>
+    <title>Le blog de mémé</title>
 </head>
 <body>
     <header>
+        {% block title %}
         <h1>Zone titre</h1>
+        {% endblock %}
         <nav id="user_log">
-            <a href="#">s'inscrire</a>
-            <a href="#">se connecter</a>
+            <ul>
+                <li><a href="#">s'inscrire</a></li>
+                <li><a href="#">se connecter</a></li>
+            </ul>
         </nav>
     </header>
+    {% block content %}
     <article>
         <section>
 
             <p>ici la zone section</p>
          </section>
     </article>
+    {% endblock %}
+    <footer>
 
+    </footer>
 </body>
 </html>

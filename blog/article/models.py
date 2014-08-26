@@ -20,7 +20,7 @@ class Article(models.Model):
     slug     = models.SlugField(max_length=255, unique=True)
 
     class Meta:
-        verbose_name = 'Article'
+        verbose_name = 'article'
         verbose_name_plural = 'Articles'
 
     def __str__(self):

@@ -16,7 +16,7 @@ class Migration(SchemaMigration):
         ))
         db.send_create_signal(u'article', ['Categorie'])
 
-        # Adding model 'Article'
+        # Adding model 'article'
         db.create_table(u'article_article', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('category', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['article.Categorie'])),
@@ -24,20 +24,20 @@ class Migration(SchemaMigration):
             ('date', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
             ('slug', self.gf('django.db.models.fields.SlugField')(unique=True, max_length=255)),
         ))
-        db.send_create_signal(u'article', ['Article'])
+        db.send_create_signal(u'article', ['article'])
 
 
     def backwards(self, orm):
         # Deleting model 'Categorie'
         db.delete_table(u'article_categorie')
 
-        # Deleting model 'Article'
+        # Deleting model 'article'
         db.delete_table(u'article_article')
 
 
     models = {
         u'article.article': {
-            'Meta': {'object_name': 'Article'},
+            'Meta': {'object_name': 'article'},
             'category': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['article.Categorie']"}),
             'date': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
