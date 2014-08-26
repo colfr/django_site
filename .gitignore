@@ -50,7 +50,8 @@ coverage.xml
 *.log
 *.pot
 settings.py
-
+*.sqlite
+db.blog
 # Sphinx documentation
 docs/_build/
 
