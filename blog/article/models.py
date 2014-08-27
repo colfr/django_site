@@ -1,5 +1,6 @@
 #-*- coding:utf-8 -*-
 from django.db import models
+from markupfield.fields import MarkupField
 
 # Create your models here.
 
@@ -18,6 +19,7 @@ class Article(models.Model):
     views    = models.IntegerField(default=0, editable=False)
     likes    = models.IntegerField(default=0, editable=False)
     slug     = models.SlugField(max_length=255, unique=True)
+    text     = MarkupField(default_markup_type='markdown')
 
     class Meta:
         verbose_name = 'article'
