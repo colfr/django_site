@@ -1,10 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block title %}Les news{% endblock %}
+
+
+{% block content %}
+
+<section>
+
+    {% for article in articles %}
+    <article>
+        <header>
+            <h1>{{ article.title }}</h1>
+            <section>article publié le {{ article.date|date:"d F Y" }} </section>
+            <article>
+                {{ article.text }}
+            </article>
+        </header>
+
+
+
+
+    </article>
+
+    {% endfor %}
+
+
+</section>
+
+{%  endblock %}
